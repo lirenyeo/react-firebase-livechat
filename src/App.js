@@ -4,6 +4,8 @@ import ChatMessage from './chat_message'
 import Firebase from './firebase'
 import './App.css'
 
+const chatRef = Firebase.database().ref('chat')
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -13,9 +15,22 @@ class App extends React.Component {
     this.sendMessage = this.sendMessage.bind(this)
   }
 
+  componentWillMount() {
+    chatRef.limitToLast(40).on('child_added', (snapshot) => {
+      this.setState({
+        messages: this.state.messages.concat({
+          id: snapshot.key,
+          user: snapshot.val().dbUser,
+          text: snapshot.val().dbMessage
+        })
+      })
+    })
+  }
+
   sendMessage(messageObj) {
-    this.setState({
-      messages: this.state.messages.concat(messageObj)
+    chatRef.push({
+      dbMessage: messageObj.text,
+      dbUser: messageObj.user
     })
   }
 
