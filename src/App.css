@@ -1,0 +1,34 @@
+#root {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.message-bubble {
+  padding: 10px;
+}
+
+.message-bubble:nth-child(even) {
+  background-color: #F5F5F5;
+}
+
+.message-bubble > * {
+  padding-left: 10px;
+}
+
+.panel-body {
+  padding: 0px;
+}
+
+.panel-heading {
+  background-color: #009999 !important;
+  color: white !important;
+}
+
+.panel-footer {
+  background-color: white;
+}
+
+#chat-message-container {
+  height: calc(100vh - 105px);
+  overflow: auto;
+}
