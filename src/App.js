@@ -4,7 +4,7 @@ import ChatMessage from './chat_message'
 import Firebase from './firebase'
 import './App.css'
 
-const chatRef = Firebase.database().ref('chat')
+const chatRef = Firebase.database().ref('chat-production')
 
 class App extends React.Component {
   constructor(props) {
