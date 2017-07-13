@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    chatRef.limitToLast(40).on('child_added', (snapshot) => {
+    chatRef.limitToLast(50).on('child_added', (snapshot) => {
       this.setState({
         messages: this.state.messages.concat({
           id: snapshot.key,

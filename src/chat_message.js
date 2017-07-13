@@ -18,9 +18,9 @@ export default class ChatMessage extends React.Component {
     return(
       <div className="container" id="chat-message-container">
         {
-          this.props.messages.map( (message, index) => {
+          this.props.messages.map( (message) => {
             return(
-              <div key={index} className="row message-bubble">
+              <div key={message.id} className="row message-bubble">
                 <p className="text-muted">{message.user}</p>
                 <span>{message.text}</span>
               </div>

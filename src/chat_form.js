@@ -25,7 +25,7 @@ export default class ChatForm extends React.Component {
 
   render() {
     return(
-      <form onSubmit={ this.handleFormSubmit } disabled={ true }>
+      <form onSubmit={ this.handleFormSubmit }>
         <div className="input-group">
           <span className="input-group-btn">
             <input 
