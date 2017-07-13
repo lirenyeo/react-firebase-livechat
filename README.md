@@ -5,13 +5,16 @@ A chatroom with realtime update. View [demo](https://react-firebase-livechat.her
 
 **The releases contains these three stages:**
 1. [Initial Template](https://github.com/lirenyeo/react-firebase-livechat/releases/tag/initial-template)
-Contains only the HTML/JSX skeleton code.
+
+   Contains only the HTML/JSX skeleton code.
 
 2. [Without Firebase](https://github.com/lirenyeo/react-firebase-livechat/releases/tag/without-firebase)
-States, Props and Events for each component is implemented, but not connected to firebase DB.
+
+   States, Props and Events for each component is implemented, but not connected to firebase DB.
 
 3. [With Firebase](https://github.com/lirenyeo/react-firebase-livechat/releases/tag/with-firebase)
-Final working version
+
+   Final working version
 
 
 ## Getting Started
