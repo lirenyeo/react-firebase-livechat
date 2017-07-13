@@ -4,7 +4,7 @@ export default class ChatForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: 'Annonymous',
+      user: 'Anonymous',
       text: ''
     }
     this.handleTextInput = this.handleTextInput.bind(this)
